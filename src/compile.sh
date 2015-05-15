@@ -6,6 +6,5 @@ do
 
 	echo "Compile for $file with -O3"
 	rustc $file -C opt-level=3 -o ../target/${out}
-	echo ""
 done
 
