@@ -22,7 +22,7 @@ fn main() {
 	let counter = Arc::new(Mutex::new(0));
 
 	let mut thread_pool = Vec::with_capacity(8);
-	for i in 0..8 {
+	for _ in 0..8 {
 		let counter = counter.clone();
 		let lookup = lookup.clone();
 		let image_output = image_output.clone();
@@ -69,10 +69,7 @@ fn main() {
 	}
 
 	for i in thread_pool {
-		match i.join() {
-		 	Ok(_) => println!("Thread terminated"),
-		 	Err(_) => println!("Thread aborted"),
-		 }
+		i.join();
 	}
 }
 

@@ -1,6 +1,6 @@
-static IM: i64 = 139968;
-static IA: i64 = 3877;
-static IC: i64 = 29573;
+const IM: i64 = 139968;
+const IA: i64 = 3877;
+const IC: i64 = 29573;
 static mut last: i64 = 42;
 
 fn main() {
@@ -13,7 +13,7 @@ fn main() {
 	let mut ary: Vec<f64> = Vec::with_capacity(n + 1);
 	ary.push(0.0);
 	unsafe {
-		for i in 1..(n + 1) {
+		for _ in 1..(n + 1) {
 			ary.push(gen_random(1.0));
 		}
 	}

@@ -36,7 +36,7 @@ impl Ord for NonNan {
 type AdjListTyp = Vec<Vec<Neighbor>>;
 
 fn main() {
-	let file = File::open("others/test.csv").unwrap();
+	let file = File::open("../data_dijkstra.csv").unwrap();
 	let reader = BufReader::new(&file);
 
 	let mut adj_list: AdjListTyp = Vec::with_capacity(NODES_COUNT);
